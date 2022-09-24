@@ -5,7 +5,7 @@ describe('test Apis',() => {
 // TC cases for validating the GET /groups/{group_guid}
 // Validating the success response status code and then the expected values in response body
 
-it.only('test group', ()=>{
+it('test group', ()=>{
 cy.request({
     method:'GET',
     url:'https://api-ssl.bitly.com/v4/groups?organization_guid',
@@ -22,23 +22,6 @@ cy.request({
      expect(result.body.groups[0].role).to.eq('org-admin')
         })
 })
-
-
-// Example for POST method
-it('test group', ()=>{
-    cy.request({
-        method:'GET',
-        url:'https://gorest.co.in/public/v2/users',
-        
-    }).then((result)=>{
-           console.log(result)
-           expect(result.status).to.eq(200)
-           expect(result.body).to.have.property('gender','male')
-           expect(result.body).to.have.property('email')
-          // expect(result.body.groups.name).to.eq('sandeepdhami')
-          //   expect(result.body.groups.organization_guid).to.eq('Om9mcHzs4hJ')
-            })
-    
-    })
 })
+
 
