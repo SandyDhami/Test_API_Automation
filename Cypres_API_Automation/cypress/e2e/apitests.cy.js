@@ -15,6 +15,7 @@ cy.request({
 }).then((result)=>{
      // Steps to validate the status and respective body objects
      expect(result.status).to.eq(200)
+     expect(result.body).to.not.be.null
      expect(result.body.groups[0].name).to.eq('sandeepdhami')
      expect(result.body.groups[0].organization_guid).to.eq('Om9mcHzs4hJ')
      expect(result.body.groups[0].guid).to.eq('Bm9mcZX9jiP')
