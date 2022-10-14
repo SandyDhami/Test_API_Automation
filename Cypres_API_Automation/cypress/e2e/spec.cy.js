@@ -7,6 +7,7 @@ describe('empty spec', () => {
 })
 
 //introducing a change to spec file
+//lets commit from GIT
 
 
 // lets commit from VS
